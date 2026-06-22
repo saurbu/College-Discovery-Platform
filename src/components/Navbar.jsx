@@ -97,12 +97,10 @@ const Navbar = () => {
           </h2>
         </div>
 
-        {/* SEARCH */}
         <div className="flex-1 min-w-0 max-w-[600px] mx-2">
           <SearchBar />
         </div>
 
-        {/* DESKTOP MENU */}
         <ul className="hidden md:flex items-center gap-5 flex-shrink-0">
 
           <li
@@ -148,14 +146,12 @@ const Navbar = () => {
           )}
         </ul>
 
-        {/* MOBILE MENU BUTTON */}
         <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
       </div>
 
-      {/* MOBILE MENU */}
       {menuOpen && (
         <div className="md:hidden bg-white border-t shadow-lg">
           <div className="flex flex-col p-4 gap-4">
@@ -222,7 +218,6 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* CATEGORY BAR */}
       {showCategories && (
         <div className="hidden lg:block border-t h-[60px] bg-white pt-2">
           <div className="flex justify-center items-center gap-6 py-2 text-sm">

@@ -28,7 +28,6 @@ const SearchResults = () => {
     <div className="bg-gray-50 min-h-screen pt-2">
       <div className="max-w-6xl mx-auto px-4">
 
-        {/* HEADER */}
         <h1 className="text-3xl font-bold text-center">
           Search Results
         </h1>
@@ -37,7 +36,6 @@ const SearchResults = () => {
           "{query}"
         </p>
 
-        {/* RESULTS */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10">
 
           {results.map((c) => (

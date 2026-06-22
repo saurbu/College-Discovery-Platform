@@ -22,7 +22,6 @@ const Saved = () => {
 
       <div className="max-w-6xl mx-auto px-4">
 
-        {/* HEADER */}
         <div className="text-center mb-10">
 
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -39,7 +38,6 @@ const Saved = () => {
 
         </div>
 
-        {/* GRID */}
         {savedColleges.length > 0 ? (
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 pb-12">
 
@@ -54,7 +52,6 @@ const Saved = () => {
                 "
               >
 
-                {/* REMOVE BUTTON */}
                 <button
                   onClick={() => removeSaved(c.name)}
                   className="absolute top-3 right-3 text-gray-400 hover:text-red-500"
@@ -62,17 +59,14 @@ const Saved = () => {
                   <BookmarkX size={20} />
                 </button>
 
-                {/* BADGE */}
                 <span className="inline-block text-xs px-2 py-1 bg-blue-100 text-blue-600 rounded-full mb-3">
                   Saved
                 </span>
 
-                {/* NAME */}
                 <h2 className="font-semibold text-lg">
                   {c.name}
                 </h2>
 
-                {/* DETAILS */}
                 <div className="mt-3 text-sm text-gray-600 space-y-1">
                   <p>📍 {c.location}</p>
                   <p>🎓 {c.exam}</p>

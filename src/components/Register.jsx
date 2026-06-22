@@ -64,7 +64,6 @@ const Register = () => {
   return (
     <div className="min-h-screen grid lg:grid-cols-2">
 
-      {/* LEFT SIDE */}
       <div className="hidden lg:flex bg-blue-900 text-white p-16 flex-col justify-center">
 
         <h1 className="text-5xl font-bold">
@@ -118,12 +117,10 @@ const Register = () => {
 
       </div>
 
-      {/* RIGHT SIDE */}
       <div className="flex items-center justify-center px-6 py-10 lg:px-20 bg-gray-50">
 
         <div className="w-full max-w-md">
 
-          {/* SWITCH */}
           <div className="flex bg-gray-200 p-1 rounded-xl mb-8">
 
             <button

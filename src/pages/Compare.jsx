@@ -81,7 +81,6 @@ const Compare = () => {
         <div className="mt-4 flex justify-center">
           <div className="w-20 h-1 bg-blue-600 rounded-full"></div>
         </div>
-        {/* HEADER SELECTORS */}
         {!showComparison && (
           <div className="grid md:grid-cols-2 pt-5 gap-6">
 
@@ -100,11 +99,9 @@ const Compare = () => {
           </div>
         )}
 
-        {/* COMPARISON */}
         {showComparison && (
           <div className="bg-white rounded-2xl shadow border p-6">
 
-            {/* TOP SECTION */}
             <div className="grid grid-cols-3 items-center mb-10">
 
               <div className="text-center">
@@ -133,7 +130,6 @@ const Compare = () => {
 
             </div>
 
-            {/* DATA ROWS */}
             <Row label="Category" v1={selected1.category} v2={selected2.category} />
             <Row label="Exam" v1={selected1.exam} v2={selected2.exam} />
             <Row label="Ranking" v1={selected1.ranking} v2={selected2.ranking} />

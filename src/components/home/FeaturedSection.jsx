@@ -33,7 +33,6 @@ const FeaturedSection = () => {
 
       <div className="max-w-6xl mx-auto">
 
-        {/* HEADER */}
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold">
             Featured Discoveries
@@ -43,7 +42,6 @@ const FeaturedSection = () => {
           </p>
         </div>
 
-        {/* GRID */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
           {items.map((item, i) => (
@@ -64,22 +62,18 @@ const FeaturedSection = () => {
               }}
             >
 
-              {/* ICON */}
               <div className="text-4xl mb-4 animate-bounce">
                 {item.icon}
               </div>
 
-              {/* TITLE */}
               <h3 className="font-semibold text-lg">
                 {item.title}
               </h3>
 
-              {/* DESC */}
               <p className="text-sm text-gray-600 mt-2">
                 {item.desc}
               </p>
 
-              {/* CTA */}
               <div className="mt-4 text-sm font-medium text-blue-600">
                 Explore →
               </div>
@@ -90,7 +84,6 @@ const FeaturedSection = () => {
         </div>
       </div>
 
-      {/* ANIMATION STYLE */}
       <style>
         {`
           @keyframes fadeUp {

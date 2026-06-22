@@ -16,7 +16,6 @@ const CollegeDetails = () => {
 
       <div className="max-w-5xl mx-auto">
 
-        {/* HEADER */}
         <div className="bg-white p-6 rounded-2xl shadow border">
           <h1 className="text-3xl font-bold">{college.name}</h1>
           <p className="text-gray-500 mt-2">
@@ -26,7 +25,6 @@ const CollegeDetails = () => {
         <div className="mt-4 flex justify-center">
             <div className="w-20 h-1 bg-blue-600 rounded-full"></div>
           </div>
-        {/* DETAILS */}
         <div className="grid md:grid-cols-2 gap-6 mt-6">
 
           <div className="bg-white p-5 rounded-2xl shadow border">

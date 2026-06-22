@@ -1,5 +1,4 @@
 export const collegeDetails = [
-  // ================= ENGINEERING =================
   {
     id: "iit-delhi",
     name: "IIT Delhi",
@@ -49,7 +48,6 @@ export const collegeDetails = [
     about: "Private top-tier institute known for flexible curriculum.",
   },
 
-  // ================= MEDICAL =================
   {
     id: "aiims-delhi",
     name: "AIIMS Delhi",
@@ -75,7 +73,6 @@ export const collegeDetails = [
     about: "Top postgraduate medical institute in India.",
   },
 
-  // ================= MBA =================
   {
     id: "iim-ahmedabad",
     name: "IIM Ahmedabad",
@@ -101,7 +98,6 @@ export const collegeDetails = [
     about: "Top MBA college with strong corporate connections.",
   },
 
-  // ================= LAW =================
   {
     id: "nlu-delhi",
     name: "NLU Delhi",
@@ -115,7 +111,6 @@ export const collegeDetails = [
     about: "Top law university in India for judiciary and corporate law.",
   },
 
-  // ================= DESIGN =================
   {
     id: "nift-delhi",
     name: "NIFT Delhi",
@@ -129,7 +124,6 @@ export const collegeDetails = [
     about: "Top fashion and design institute in India.",
   },
 
-  // ================= UNIVERSITIES =================
   {
     id: "du-delhi-university",
     name: "Delhi University",
@@ -142,7 +136,6 @@ export const collegeDetails = [
     placements: "8 LPA",
     about: "One of the most popular universities in India.",
   },
-  // ================= SCHOOLS =================
   {
     id: "dps-rk-puram",
     name: "Delhi Public School RK Puram",

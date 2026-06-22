@@ -9,7 +9,6 @@ const Footer = () => {
 
       <div className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
 
-        {/* BRAND */}
         <div>
           <h2 className="text-xl font-bold">CollegeFind⚲</h2>
           <p className="text-gray-400 text-sm mt-3">
@@ -17,7 +16,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* QUICK LINKS */}
         <div>
           <h3 className="font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm text-gray-400">
@@ -28,7 +26,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* CATEGORIES */}
         <div>
           <h3 className="font-semibold mb-3">Top Categories</h3>
           <ul className="space-y-2 text-sm text-gray-400">
@@ -39,7 +36,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* SUPPORT */}
         <div>
           <h3 className="font-semibold mb-3">Support</h3>
           <ul className="space-y-2 text-sm text-gray-400">
@@ -51,7 +47,6 @@ const Footer = () => {
 
       </div>
 
-      {/* BOTTOM BAR */}
       <div className="border-t border-gray-800 py-4 text-center text-gray-500 text-sm">
         © {new Date().getFullYear()} CollegeFind⚲. All rights reserved.
       </div>

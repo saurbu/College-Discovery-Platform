@@ -8,7 +8,6 @@ const CollegeCard = ({ college, index }) => {
 
   const STORAGE_KEY = "savedColleges"
 
-  // check saved state
   useEffect(() => {
     const savedList = JSON.parse(localStorage.getItem(STORAGE_KEY)) || []
     const exists = savedList.some((c) => c.id === college.id)
@@ -16,7 +15,7 @@ const CollegeCard = ({ college, index }) => {
   }, [college.id])
 
   const toggleSave = (e) => {
-    e.stopPropagation() // IMPORTANT (prevents navigation click bugs)
+    e.stopPropagation() 
 
     let savedList = JSON.parse(localStorage.getItem(STORAGE_KEY)) || []
 
@@ -44,7 +43,6 @@ const CollegeCard = ({ college, index }) => {
         hover:-translate-y-2 hover:shadow-xl
       "
     >
-      {/* SAVE BUTTON */}
       <button
         onClick={toggleSave}
         className={`absolute top-3 right-3 transition ${
@@ -54,21 +52,17 @@ const CollegeCard = ({ college, index }) => {
         <Bookmark fill={saved ? "currentColor" : "none"} />
       </button>
 
-      {/* CATEGORY */}
       <span className="text-xs px-2 py-1 bg-blue-100 text-blue-600 rounded-full">
         {college.category}
       </span>
 
-      {/* NAME */}
       <h2 className="font-semibold text-lg mt-2">{college.name}</h2>
 
-      {/* DETAILS */}
       <div className="text-sm text-gray-600 mt-3 space-y-1">
         <p>📍 {college.location}</p>
         <p>🎓 {college.exam}</p>
       </div>
 
-      {/* BUTTON */}
       <button
         className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg text-sm hover:bg-blue-700"
         onClick={(e) => {

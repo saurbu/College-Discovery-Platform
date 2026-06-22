@@ -10,7 +10,6 @@ const TopColleges = () => {
 
       <div className="max-w-6xl mx-auto">
 
-        {/* HEADER */}
         <div className="flex items-end justify-between mb-8">
 
           <div>
@@ -31,7 +30,6 @@ const TopColleges = () => {
 
         </div>
 
-        {/* GRID */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
 
           {collegeDetails.slice(0, 6).map((c, i) => (
@@ -47,7 +45,6 @@ const TopColleges = () => {
               "
             >
 
-              {/* RANK + CATEGORY */}
               <div className="flex items-center justify-between mb-3">
 
                 <span className="text-xs px-2 py-1 bg-blue-100 text-blue-600 rounded-full">
@@ -60,22 +57,18 @@ const TopColleges = () => {
 
               </div>
 
-              {/* NAME */}
               <h3 className="font-semibold text-lg leading-snug text-gray-900">
                 {c.name}
               </h3>
 
-              {/* LOCATION */}
               <p className="text-gray-500 text-sm mt-2">
                 📍 {c.location}
               </p>
 
-              {/* EXAM */}
               <p className="text-gray-500 text-sm">
                 🎓 {c.exam}
               </p>
 
-              {/* CTA */}
               <div className="mt-4 text-sm font-medium text-blue-600">
                 View Details →
               </div>

@@ -11,12 +11,10 @@ const Colleges = () => {
 
   let data = [...collegeDetails]
 
-  // CATEGORY FILTER
   if (category) {
     data = data.filter((c) => c.category === category)
   }
 
-  // SEARCH FILTER
   if (search) {
     const q = search.toLowerCase()
 
@@ -34,7 +32,6 @@ const Colleges = () => {
 
       <div className="max-w-6xl mx-auto px-4">
 
-        {/* HEADER */}
         <div className="text-center mb-10">
 
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -51,7 +48,6 @@ const Colleges = () => {
 
         </div>
 
-        {/* CONTENT */}
         {data.length > 0 ? (
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 pb-12">
 
