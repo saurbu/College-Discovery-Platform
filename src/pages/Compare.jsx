@@ -75,10 +75,10 @@ const Compare = () => {
 
       <div className="max-w-6xl mx-auto">
 
-        <h1 className="text-3xl font-bold text-center mb-10">
+        <h1 className="text-3xl font-bold text-center mb-6">
           Compare Colleges
         </h1>
-        <div className="mt-4 flex justify-center">
+        <div className="mb-5 flex justify-center">
           <div className="w-20 h-1 bg-blue-600 rounded-full"></div>
         </div>
         {!showComparison && (
@@ -100,7 +100,7 @@ const Compare = () => {
         )}
 
         {showComparison && (
-          <div className="bg-white rounded-2xl shadow border p-6">
+          <div className="bg-white rounded-2xl bg-gradient-to-r from-blue-50 via-white to-blue-50 shadow border p-6">
 
             <div className="grid grid-cols-3 items-center mb-10">
 

@@ -5,6 +5,7 @@ import CategorySection from "../components/home/CategorySection"
 import FeaturedSection from "../components/home/FeaturedSection"
 import ToolsSection from "../components/home/ToolsSection"
 import TopColleges from "../components/home/TopColleges"
+import Impact from "../components/home/Impact"
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <FeaturedSection />
       <TopColleges />
       <ToolsSection />
+      <Impact />
     </div>
   )
 }

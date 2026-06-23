@@ -79,11 +79,10 @@ const Navbar = () => {
   }, [])
 
   return (
-    <div className="h-16 md:h-20 fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+    <div className="h-16 md:h-16 fixed top-0 left-0 w-full z-50 bg-white shadow-md">
 
       <div className="h-16 flex items-center justify-between px-3 md:px-5 gap-3">
 
-        {/* LOGO */}
         <div
           onClick={() => {
             navigate("/")

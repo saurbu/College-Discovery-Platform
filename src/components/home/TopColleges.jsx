@@ -1,86 +1,133 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
-import { collegeDetails } from "../../data/collegeDetails"
+import { motion } from "framer-motion"
+import collegeImg from "../../assets/img1.png"
 
-const TopColleges = () => {
+const PopularStreams = () => {
   const navigate = useNavigate()
 
+  const engineering = [
+    "IIT Delhi",
+    "IIT Bombay",
+    "NIT Trichy",
+    "BITS Pilani",
+    "VIT Vellore",
+  ]
+
+  const medical = [
+    "AIIMS Delhi",
+    "CMC Vellore",
+    "JIPMER",
+    "KGMU",
+    "AFMC Pune",
+  ]
+
   return (
-    <section className="px-4 py-14 bg-gray-50">
-
-      <div className="max-w-6xl mx-auto">
-
-        <div className="flex items-end justify-between mb-8">
-
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-              Top Colleges Preview
-            </h2>
-            <p className="text-gray-500 text-sm mt-1">
-              Most trusted institutions across India
-            </p>
-          </div>
-
-          <button
-            onClick={() => navigate("/colleges")}
-            className="text-blue-600 font-medium text-sm hover:underline"
+    <section className="py-20 bg-gradient-to-r from-slate-50 to-blue-50 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-4xl lg:text-5xl font-bold mb-4"
           >
-            View All →
-          </button>
+            Top Colleges
+          </motion.h2>
+        
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-gray-600 mb-8 text-lg"
+          >
+            Check the Top colleges
+          </motion.p>              
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-        </div>
+          <motion.div
+            initial={{ opacity: 0, x: -150 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="flex justify-center"
+          >
+            <img
+              src={collegeImg}
+              alt="College Illustration"
+              className="w-full max-w-lg"
+            />
+          </motion.div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="space-y-8">
 
-          {collegeDetails.slice(0, 6).map((c, i) => (
-            <div
-              key={c.id}
-              onClick={() => navigate(`/college/${c.id}`)}
-              className="
-                bg-white rounded-2xl p-5
-                border border-gray-100 shadow-sm
-                cursor-pointer
-                transition-all duration-300
-                hover:-translate-y-2 hover:shadow-xl
-              "
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-3xl p-8 shadow-lg"
             >
-
-              <div className="flex items-center justify-between mb-3">
-
-                <span className="text-xs px-2 py-1 bg-blue-100 text-blue-600 rounded-full">
-                  Top {i + 1}
-                </span>
-
-                <span className="text-xs text-gray-400 capitalize">
-                  {c.category}
-                </span>
-
-              </div>
-
-              <h3 className="font-semibold text-lg leading-snug text-gray-900">
-                {c.name}
+              <h3 className="text-3xl font-bold mb-3">
+                🏗️ Engineering Colleges
               </h3>
 
-              <p className="text-gray-500 text-sm mt-2">
-                📍 {c.location}
+              <p className="text-gray-600 mb-6">
+                Top engineering institutions in India.
               </p>
 
-              <p className="text-gray-500 text-sm">
-                🎓 {c.exam}
-              </p>
-
-              <div className="mt-4 text-sm font-medium text-blue-600">
-                View Details →
+              <div className="flex flex-wrap gap-3">
+                {engineering.map((college, index) => (
+                  <button
+                    key={index}
+                    onClick={() =>
+                      navigate("/colleges?category=engineering")
+                    }
+                    className="px-4 py-2 rounded-full border hover:bg-blue-50 hover:text-blue-600 transition"
+                  >
+                    {college}
+                  </button>
+                ))}
               </div>
+            </motion.div>
 
-            </div>
-          ))}
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-3xl p-8 shadow-lg"
+            >
+              <h3 className="text-3xl font-bold mb-3">
+                🏥 Medical Colleges
+              </h3>
+
+              <p className="text-gray-600 mb-6">
+                Leading medical institutions in India.
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+                {medical.map((college, index) => (
+                  <button
+                    key={index}
+                    onClick={() =>
+                      navigate("/colleges?category=medical")
+                    }
+                    className="px-4 py-2 rounded-full border hover:bg-green-50 hover:text-green-600 transition"
+                  >
+                    {college}
+                  </button>
+                ))}
+              </div>
+            </motion.div>
+
+          </div>
 
         </div>
       </div>
-
     </section>
   )
 }
 
-export default TopColleges
+export default PopularStreams

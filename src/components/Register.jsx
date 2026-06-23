@@ -64,7 +64,7 @@ const Register = () => {
   return (
     <div className="min-h-screen grid lg:grid-cols-2">
 
-      <div className="hidden lg:flex bg-blue-900 text-white p-16 flex-col justify-center">
+      <div className="hidden lg:flex  bg-gradient-to-r from-blue-700 to-purple-600 text-white p-16 flex-col justify-center">
 
         <h1 className="text-5xl font-bold">
           CollegeFind⚲
